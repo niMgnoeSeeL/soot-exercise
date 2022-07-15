@@ -1,0 +1,199 @@
+Hello, World!
+target
+=================================
+Method: compare
+Begin-----------PDGRegion:  0-------------
+Children Regions are: 1, 
+Units are: 
+i0 := @parameter0: int
+i1 := @parameter1: int
+i2 := @parameter2: int
+i3 := @parameter3: int
+r9 = ""
+if i0 >= i1 goto (branch)
+return r10
+End of PDG Region 0 -----------------------------
+
+	Type: CFGNODE: Block 0:
+	[preds: ] [succs: 1 4 ]
+	i0 := @parameter0: int;
+	i1 := @parameter1: int;
+	i2 := @parameter2: int;
+	i3 := @parameter3: int;
+	r9 = "";
+	if i0 >= i1 goto (branch);
+
+	Type: CFGNODE: Block 13:
+	[preds: 3 7 11 12 ] [succs: ]
+	return r10;
+
+Begin-----------PDGRegion:  1-------------
+Parent is: 0----
+Children Regions are: 2, 
+Units are: 
+if i0 >= i2 goto (branch)
+End of PDG Region 1 -----------------------------
+
+	Type: CFGNODE: Block 1:
+	[preds: 0 ] [succs: 2 4 ]
+	if i0 >= i2 goto (branch);
+
+Begin-----------PDGRegion:  2-------------
+Parent is: 1----
+Children Regions are: 3, 4, 
+Units are: 
+if i0 >= i3 goto (branch)
+End of PDG Region 2 -----------------------------
+
+	Type: CFGNODE: Block 2:
+	[preds: 1 ] [succs: 3 4 ]
+	if i0 >= i3 goto (branch);
+
+Begin-----------PDGRegion:  3-------------
+Parent is: 2----
+Children Regions are: 
+Units are: 
+$r6 = newarray (java.lang.Object)[1]
+$r7 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i0)
+$r6[0] = $r7
+$r8 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r6)
+r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r8) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001")
+goto [?= return r10]
+End of PDG Region 3 -----------------------------
+
+	Type: CFGNODE: Block 3:
+	[preds: 2 ] [succs: 13 ]
+	$r6 = newarray (java.lang.Object)[1];
+	$r7 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i0);
+	$r6[0] = $r7;
+	$r8 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r6);
+	r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r8) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+	goto [?= return r10];
+
+Begin-----------PDGRegion:  4-------------
+Parent is: 2----
+Children Regions are: 5, 
+Units are: 
+if i1 >= i0 goto (branch)
+End of PDG Region 4 -----------------------------
+
+	Type: CFGNODE: Block 4:
+	[preds: 0 1 2 ] [succs: 5 8 ]
+	if i1 >= i0 goto (branch);
+
+Begin-----------PDGRegion:  5-------------
+Parent is: 4----
+Children Regions are: 6, 
+Units are: 
+if i1 >= i2 goto (branch)
+End of PDG Region 5 -----------------------------
+
+	Type: CFGNODE: Block 5:
+	[preds: 4 ] [succs: 6 8 ]
+	if i1 >= i2 goto (branch);
+
+Begin-----------PDGRegion:  6-------------
+Parent is: 5----
+Children Regions are: 7, 8, 
+Units are: 
+if i1 >= i3 goto (branch)
+End of PDG Region 6 -----------------------------
+
+	Type: CFGNODE: Block 6:
+	[preds: 5 ] [succs: 7 8 ]
+	if i1 >= i3 goto (branch);
+
+Begin-----------PDGRegion:  7-------------
+Parent is: 6----
+Children Regions are: 
+Units are: 
+$r3 = newarray (java.lang.Object)[1]
+$r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i1)
+$r3[0] = $r4
+$r5 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r3)
+r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r5) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001")
+goto [?= return r10]
+End of PDG Region 7 -----------------------------
+
+	Type: CFGNODE: Block 7:
+	[preds: 6 ] [succs: 13 ]
+	$r3 = newarray (java.lang.Object)[1];
+	$r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i1);
+	$r3[0] = $r4;
+	$r5 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r3);
+	r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r5) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+	goto [?= return r10];
+
+Begin-----------PDGRegion:  8-------------
+Parent is: 6----
+Children Regions are: 9, 
+Units are: 
+if i2 >= i0 goto $r11 = newarray (java.lang.Object)[1]
+End of PDG Region 8 -----------------------------
+
+	Type: CFGNODE: Block 8:
+	[preds: 4 5 6 ] [succs: 9 12 ]
+	if i2 >= i0 goto $r11 = newarray (java.lang.Object)[1];
+
+Begin-----------PDGRegion:  9-------------
+Parent is: 8----
+Children Regions are: 10, 
+Units are: 
+if i2 >= i1 goto $r11 = newarray (java.lang.Object)[1]
+End of PDG Region 9 -----------------------------
+
+	Type: CFGNODE: Block 9:
+	[preds: 8 ] [succs: 10 12 ]
+	if i2 >= i1 goto $r11 = newarray (java.lang.Object)[1];
+
+Begin-----------PDGRegion:  10-------------
+Parent is: 9----
+Children Regions are: 11, 12, 
+Units are: 
+if i2 >= i3 goto $r11 = newarray (java.lang.Object)[1]
+End of PDG Region 10 -----------------------------
+
+	Type: CFGNODE: Block 10:
+	[preds: 9 ] [succs: 11 12 ]
+	if i2 >= i3 goto $r11 = newarray (java.lang.Object)[1];
+
+Begin-----------PDGRegion:  11-------------
+Parent is: 10----
+Children Regions are: 
+Units are: 
+$r0 = newarray (java.lang.Object)[1]
+$r1 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i2)
+$r0[0] = $r1
+$r2 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r0)
+r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001")
+goto [?= return r10]
+End of PDG Region 11 -----------------------------
+
+	Type: CFGNODE: Block 11:
+	[preds: 10 ] [succs: 13 ]
+	$r0 = newarray (java.lang.Object)[1];
+	$r1 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i2);
+	$r0[0] = $r1;
+	$r2 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r0);
+	r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+	goto [?= return r10];
+
+Begin-----------PDGRegion:  12-------------
+Parent is: 10----
+Children Regions are: 
+Units are: 
+$r11 = newarray (java.lang.Object)[1]
+$r12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i3)
+$r11[0] = $r12
+$r13 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r11)
+r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r13) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001")
+End of PDG Region 12 -----------------------------
+
+	Type: CFGNODE: Block 12:
+	[preds: 8 9 10 ] [succs: 13 ]
+	$r11 = newarray (java.lang.Object)[1];
+	$r12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i3);
+	$r11[0] = $r12;
+	$r13 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r11);
+	r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r13) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+

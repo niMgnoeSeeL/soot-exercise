@@ -1,0 +1,243 @@
+public class benchmark.Smallest extends java.lang.Object
+{
+    public java.util.Scanner scanner;
+    public java.lang.String output;
+
+    public void <init>()
+    {
+        benchmark.Smallest r0;
+
+        r0 := @this: benchmark.Smallest;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<benchmark.Smallest: java.lang.String output> = "";
+
+        return;
+    }
+
+    public static void main(java.lang.String[]) throws java.lang.Exception
+    {
+        benchmark.Smallest $r0, r1;
+        java.lang.String[] r2;
+        int $i0;
+        java.util.Scanner $r3, $r8;
+        java.io.InputStream $r4;
+        java.lang.String $r5, $r6, $r9;
+        java.io.PrintStream $r7;
+
+        r2 := @parameter0: java.lang.String[];
+
+        $r0 = new benchmark.Smallest;
+
+        specialinvoke $r0.<benchmark.Smallest: void <init>()>();
+
+        r1 = $r0;
+
+        $i0 = lengthof r2;
+
+        if $i0 <= 0 goto label1;
+
+        $r8 = new java.util.Scanner;
+
+        $r9 = r2[0];
+
+        specialinvoke $r8.<java.util.Scanner: void <init>(java.lang.String)>($r9);
+
+        r1.<benchmark.Smallest: java.util.Scanner scanner> = $r8;
+
+        goto label2;
+
+     label1:
+        $r3 = new java.util.Scanner;
+
+        $r4 = <java.lang.System: java.io.InputStream in>;
+
+        specialinvoke $r3.<java.util.Scanner: void <init>(java.io.InputStream)>($r4);
+
+        r1.<benchmark.Smallest: java.util.Scanner scanner> = $r3;
+
+     label2:
+        $r5 = virtualinvoke r1.<benchmark.Smallest: java.lang.String exec()>();
+
+        r1.<benchmark.Smallest: java.lang.String output> = $r5;
+
+        $r7 = <java.lang.System: java.io.PrintStream out>;
+
+        $r6 = r1.<benchmark.Smallest: java.lang.String output>;
+
+        virtualinvoke $r7.<java.io.PrintStream: void println(java.lang.String)>($r6);
+
+        return;
+    }
+
+    public java.lang.String exec() throws java.lang.Exception
+    {
+        benchmark.IntObj $r0, r1, $r2, r3, $r4, r5, $r6, r7;
+        benchmark.Smallest r8;
+        java.lang.Object[] $r9;
+        java.lang.String $r10, $r11, $r12, $r17;
+        java.util.Scanner $r13, $r14, $r15, $r16;
+        int $i0, $i1, $i2, $i3, $i4, $i5, $i6, $i7;
+
+        r8 := @this: benchmark.Smallest;
+
+        $r0 = new benchmark.IntObj;
+
+        specialinvoke $r0.<benchmark.IntObj: void <init>()>();
+
+        r1 = $r0;
+
+        $r2 = new benchmark.IntObj;
+
+        specialinvoke $r2.<benchmark.IntObj: void <init>()>();
+
+        r3 = $r2;
+
+        $r4 = new benchmark.IntObj;
+
+        specialinvoke $r4.<benchmark.IntObj: void <init>()>();
+
+        r5 = $r4;
+
+        $r6 = new benchmark.IntObj;
+
+        specialinvoke $r6.<benchmark.IntObj: void <init>()>();
+
+        r7 = $r6;
+
+        $r10 = r8.<benchmark.Smallest: java.lang.String output>;
+
+        $r9 = newarray (java.lang.Object)[0];
+
+        $r11 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("Please enter 4 numbers separated by spaces > ", $r9);
+
+        $r12 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>($r10, $r11) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+
+        r8.<benchmark.Smallest: java.lang.String output> = $r12;
+
+        $r13 = r8.<benchmark.Smallest: java.util.Scanner scanner>;
+
+        $i0 = virtualinvoke $r13.<java.util.Scanner: int nextInt()>();
+
+        r1.<benchmark.IntObj: int value> = $i0;
+
+        $r14 = r8.<benchmark.Smallest: java.util.Scanner scanner>;
+
+        $i1 = virtualinvoke $r14.<java.util.Scanner: int nextInt()>();
+
+        r3.<benchmark.IntObj: int value> = $i1;
+
+        $r15 = r8.<benchmark.Smallest: java.util.Scanner scanner>;
+
+        $i2 = virtualinvoke $r15.<java.util.Scanner: int nextInt()>();
+
+        r5.<benchmark.IntObj: int value> = $i2;
+
+        $r16 = r8.<benchmark.Smallest: java.util.Scanner scanner>;
+
+        $i3 = virtualinvoke $r16.<java.util.Scanner: int nextInt()>();
+
+        r7.<benchmark.IntObj: int value> = $i3;
+
+        $i7 = r1.<benchmark.IntObj: int value>;
+
+        $i6 = r3.<benchmark.IntObj: int value>;
+
+        $i5 = r5.<benchmark.IntObj: int value>;
+
+        $i4 = r7.<benchmark.IntObj: int value>;
+
+        $r17 = staticinvoke <benchmark.Smallest: java.lang.String compare(int,int,int,int)>($i7, $i6, $i5, $i4);
+
+        return $r17;
+    }
+
+    public static java.lang.String compare(int, int, int, int)
+    {
+        int i0, i1, i2, i3;
+        java.lang.Object[] $r0, $r3, $r6, $r11;
+        java.lang.Integer $r1, $r4, $r7, $r12;
+        java.lang.String $r2, $r5, $r8, r9, r10, $r13;
+
+        i0 := @parameter0: int;
+
+        i1 := @parameter1: int;
+
+        i2 := @parameter2: int;
+
+        i3 := @parameter3: int;
+
+        r9 = "";
+
+        if i0 >= i1 goto label1;
+
+        if i0 >= i2 goto label1;
+
+        if i0 >= i3 goto label1;
+
+        $r6 = newarray (java.lang.Object)[1];
+
+        $r7 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i0);
+
+        $r6[0] = $r7;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r6);
+
+        r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r8) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+
+        goto label4;
+
+     label1:
+        if i1 >= i0 goto label2;
+
+        if i1 >= i2 goto label2;
+
+        if i1 >= i3 goto label2;
+
+        $r3 = newarray (java.lang.Object)[1];
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i1);
+
+        $r3[0] = $r4;
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r3);
+
+        r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r5) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+
+        goto label4;
+
+     label2:
+        if i2 >= i0 goto label3;
+
+        if i2 >= i1 goto label3;
+
+        if i2 >= i3 goto label3;
+
+        $r0 = newarray (java.lang.Object)[1];
+
+        $r1 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i2);
+
+        $r0[0] = $r1;
+
+        $r2 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r0);
+
+        r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+
+        goto label4;
+
+     label3:
+        $r11 = newarray (java.lang.Object)[1];
+
+        $r12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(i3);
+
+        $r11[0] = $r12;
+
+        $r13 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%d is the smallest\n", $r11);
+
+        r10 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r9, $r13) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001");
+
+     label4:
+        return r10;
+    }
+}
